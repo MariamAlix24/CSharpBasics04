@@ -53,7 +53,10 @@
             printBookInfo("clean Code", 450);
             #endregion
             #region Question11
-            printBookInfo(pages:500, title:"Clean Code");
+            printBookInfo(pages: 500, title: "Clean Code");
+            #endregion
+            #region Question12
+            printAllTitles("c# Basics", "clean code","Design Patterns");
             #endregion
         }
 
@@ -102,9 +105,17 @@
 
         }
         //Question10
-        static void printBookInfo( string title,int pages =300)
+        static void printBookInfo(string title, int pages = 300)
         {
             Console.WriteLine($"Title: {title}, Pages: {pages}");
+        }
+        //Question12
+        static void printAllTitles(params string[] titles)
+        {
+            foreach (var title in titles)
+            {
+                Console.WriteLine(title);
+            }
         }
     }
 }
