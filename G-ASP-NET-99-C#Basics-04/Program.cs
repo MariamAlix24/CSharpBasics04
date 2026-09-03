@@ -42,6 +42,12 @@
             ReplaceArray(ref Prices1);
             Console.WriteLine(Prices1.Length); // Output: 3.0
             #endregion
+            #region Question9
+            if (TryGetPrice("Clean Code", out double price))
+            {
+                Console.WriteLine(price);
+            }
+            #endregion
         }
         //Question3
         static void printWelcomeMessage()
@@ -73,6 +79,17 @@
         {
             Prices1 = new double[] { 10.0, 12.5, 15.0 };
 
+        }
+        //Question9
+        static bool TryGetPrice(string title, out double price)
+        {
+            if (title == "Clean Code")
+            {
+                price = 25.5;
+                return true;
+            }
+            price = 0;
+            return false;
         }
     }
 }
