@@ -37,6 +37,11 @@
             AddBonusPagesByRef(ref Pages);
             Console.WriteLine(Pages);//Difference: In question 5, ⁠pages⁠ was passed by value (a copy was modified, so the original stayed 400). In question 7, using ⁠ref⁠ passes it by reference, so the method modifies the original variable directly to 450.
             #endregion
+            #region Question8
+            double[] Prices1 = { 25.5, 40.0 };
+            ReplaceArray(ref Prices1);
+            Console.WriteLine(Prices1.Length); // Output: 3.0
+            #endregion
         }
         //Question3
         static void printWelcomeMessage()
@@ -62,6 +67,12 @@
         static void AddBonusPagesByRef(ref int Pages)
         {
             Pages += 50;
+        }
+        //Question8
+        static void ReplaceArray(ref double[] Prices1)
+        {
+            Prices1 = new double[] { 10.0, 12.5, 15.0 };
+
         }
     }
 }
