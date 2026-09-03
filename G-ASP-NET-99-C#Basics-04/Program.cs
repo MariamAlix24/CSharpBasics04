@@ -14,16 +14,24 @@
                 {3,5 },
                 {1,4},
             };
-            Console.WriteLine(shelfCopies[1,0]);
+            Console.WriteLine(shelfCopies[1, 0]);
             #endregion
             #region Question3
             printWelcomeMessage();
+            #endregion
+            #region Question4
+            printBookTitle("Clean Code");
             #endregion
         }
         //Question3
         static void printWelcomeMessage()
         {
             Console.WriteLine("Welcome to the library!");
+        }
+        //Question4
+        static void printBookTitle(string title)
+        {
+            Console.WriteLine("Book Title:" + title);
         }
     }
 }
