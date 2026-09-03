@@ -48,6 +48,10 @@
                 Console.WriteLine(price);
             }
             #endregion
+            #region Question10
+            printBookInfo("Clean Code");
+            printBookInfo("clean Code", 450);
+            #endregion
         }
         //Question3
         static void printWelcomeMessage()
@@ -90,6 +94,12 @@
             }
             price = 0;
             return false;
+
+        }
+        //Question10
+        static void printBookInfo( string title,int pages =300)
+        {
+            Console.WriteLine($"Title: {title}, Pages: {pages}");
         }
     }
 }
