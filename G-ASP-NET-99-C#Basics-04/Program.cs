@@ -16,7 +16,14 @@
             };
             Console.WriteLine(shelfCopies[1,0]);
             #endregion
-
+            #region Question3
+            printWelcomeMessage();
+            #endregion
+        }
+        //Question3
+        static void printWelcomeMessage()
+        {
+            Console.WriteLine("Welcome to the library!");
         }
     }
 }
