@@ -27,6 +27,11 @@
             AddBonusPages(pages);
             Console.WriteLine(pages);// Output: 400 Because int is a value type.when we pass it to the method ,c# sends a copy of the variable pages,not the original one.
             #endregion
+            #region Question6
+            double[] Prices = { 25.5, 40.0 };
+            ApplyDiscount(Prices);
+            Console.WriteLine(Prices[0]); // Output: 20.5Because arrays are reference types. When we pass the Prices array to the ApplyDiscount method, we are passing a reference to the original array. Therefore, any changes made to the array inside the method will affect the original array.
+            #endregion
         }
         //Question3
         static void printWelcomeMessage()
@@ -43,6 +48,10 @@
         {
             pages += 50;
         }
-
+        //Question6
+        static void ApplyDiscount(double[] Prices)
+        {
+            Prices[0] -= 5;
+        }
     }
 }
