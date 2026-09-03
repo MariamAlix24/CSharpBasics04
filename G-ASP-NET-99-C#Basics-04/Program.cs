@@ -32,6 +32,11 @@
             ApplyDiscount(Prices);
             Console.WriteLine(Prices[0]); // Output: 20.5Because arrays are reference types. When we pass the Prices array to the ApplyDiscount method, we are passing a reference to the original array. Therefore, any changes made to the array inside the method will affect the original array.
             #endregion
+            #region Question7
+            int Pages = 400;
+            AddBonusPagesByRef(ref Pages);
+            Console.WriteLine(Pages);//Difference: In question 5, ⁠pages⁠ was passed by value (a copy was modified, so the original stayed 400). In question 7, using ⁠ref⁠ passes it by reference, so the method modifies the original variable directly to 450.
+            #endregion
         }
         //Question3
         static void printWelcomeMessage()
@@ -52,6 +57,11 @@
         static void ApplyDiscount(double[] Prices)
         {
             Prices[0] -= 5;
+        }
+        //Question7
+        static void AddBonusPagesByRef(ref int Pages)
+        {
+            Pages += 50;
         }
     }
 }
