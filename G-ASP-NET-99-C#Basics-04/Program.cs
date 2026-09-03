@@ -22,6 +22,11 @@
             #region Question4
             printBookTitle("Clean Code");
             #endregion
+            #region Question5
+            int pages = 400;
+            AddBonusPages(pages);
+            Console.WriteLine(pages);// Output: 400 Because int is a value type.when we pass it to the method ,c# sends a copy of the variable pages,not the original one.
+            #endregion
         }
         //Question3
         static void printWelcomeMessage()
@@ -33,5 +38,11 @@
         {
             Console.WriteLine("Book Title:" + title);
         }
+        //Question5
+        static void AddBonusPages(int pages)
+        {
+            pages += 50;
+        }
+
     }
 }
